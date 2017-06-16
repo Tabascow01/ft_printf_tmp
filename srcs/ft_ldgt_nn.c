@@ -6,7 +6,7 @@
 /*   By: mchemakh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 02:27:59 by mchemakh          #+#    #+#             */
-/*   Updated: 2017/06/16 13:46:52 by mchemakh         ###   ########.fr       */
+/*   Updated: 2017/06/16 14:00:07 by mchemakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ void	ft_ldgt_8(t_flags *list, t_precs *lst)
 	while (lst->i < list->dig1)
 		lst->tmp[lst->i++] = ' ';
 	list->args = ft_strjoin(lst->tmpargs, lst->tmp);
-	lst->tmpargs = ft_reallocf(list->args, ft_strlen(list->args));
-	list->args = ft_strjoin(lst->tmpargs, lst->tmp);
-	list->args = ft_reallocf(list->args, ft_strlen(list->args));
+	list->args = ft_reallocf(list->args, 0);
 }
 
 void	ft_ldgt_7(t_flags *list, t_precs *lst)
@@ -52,5 +50,6 @@ void	ft_ldgt_7(t_flags *list, t_precs *lst)
 		lst->tmpargs[lst->i] = list->args[lst->i];
 		lst->i++;
 	}
+	ft_strdel(&del);
 	list->args = ft_strjoin(lst->tmpargs, lst->tmp);
 }
