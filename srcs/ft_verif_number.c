@@ -6,7 +6,7 @@
 /*   By: mchemakh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 17:59:22 by mchemakh          #+#    #+#             */
-/*   Updated: 2017/03/23 23:14:47 by mchemakh         ###   ########.fr       */
+/*   Updated: 2017/06/16 13:26:48 by mchemakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void			ft_save_digit(t_flags *list, int idxtmp)
 	if (list->digit != 0)
 		i++;
 	if (list->digit == NULL)
-		list->digit = ft_strnew(12);
+		list->digit = ft_strnew(100);
 	while (list->format[idxtmp] && list->format[idxtmp] != '%'
 			&& ft_isflag(list->format[idxtmp]))
 	{

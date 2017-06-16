@@ -6,7 +6,7 @@
 /*   By: mchemakh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/29 02:13:40 by mchemakh          #+#    #+#             */
-/*   Updated: 2017/04/18 14:10:39 by mchemakh         ###   ########.fr       */
+/*   Updated: 2017/06/16 13:47:00 by mchemakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_ldgt_5(char **newarg, t_flags *list, t_precs *lst)
 		*newarg = ft_strjoin(lst->zero, list->args);
 	if (a > 0)
 		list->args--;
-	ft_strdel(&list->args);
 	list->args = (*newarg);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mchemakh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/10 16:38:38 by mchemakh          #+#    #+#             */
-/*   Updated: 2017/05/10 04:05:59 by mchemakh         ###   ########.fr       */
+/*   Updated: 2017/06/16 13:47:13 by mchemakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,6 @@ static void		ft_digit_nn(t_flags *list, int *i, char **newarg, char **tmp)
 	else if ((*i) > 0)
 		(*newarg)[(*i)] = '\0';
 	(*tmp) = ft_strjoin((*newarg), list->args);
-	ft_strdel((*&newarg));
-	ft_strdel(&list->args);
 	list->args = ft_reallocf((*tmp), 0);
 }
 

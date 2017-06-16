@@ -6,7 +6,7 @@
 /*   By: mchemakh <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 05:40:34 by mchemakh          #+#    #+#             */
-/*   Updated: 2017/05/07 21:46:38 by mchemakh         ###   ########.fr       */
+/*   Updated: 2017/06/16 13:46:40 by mchemakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,8 @@ void	ft_dgt_7(t_flags *list, t_precs *lst)
 			lst->tmpargs[lst->i] = list->args[lst->i];
 			lst->i++;
 		}
-		ft_strdel(&del);
 		list->args = ft_strjoin(lst->tmpargs, lst->tmp);
 	}
-	ft_strdel(&lst->tmpargs);
 }
 
 void	ft_dgt_8(t_flags *list, t_precs *lst)
@@ -53,7 +51,6 @@ void	ft_dgt_8(t_flags *list, t_precs *lst)
 	while (lst->i < list->dig1)
 		lst->tmp[lst->i++] = ' ';
 	list->args = ft_strjoin(lst->tmp, list->args);
-	ft_strdel(&lst->tmp);
 }
 
 void	ft_dgt_5_n(t_flags *list, t_precs *lst, int *a)
